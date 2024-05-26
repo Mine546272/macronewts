@@ -1,7 +1,6 @@
 import React from "react";
 import MiniCard from "./MiniCard";
 
-
 const dietFoods = [
     { name: "Grilled Lemon Garlic Salmon" 
 
