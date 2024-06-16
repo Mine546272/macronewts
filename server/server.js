@@ -6,6 +6,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const userRoutes = require('./routes/user')
 const cors = require('cors');
+const resepRoute = require('../server/routes/recipes')
 
 // Express app
 const app = express()
@@ -29,9 +30,10 @@ app.use((req, res, next) => {
     next();
 })
 
+app.use('/api/resep',resepRoute)
+
 // Routes
 app.use('/api/user', userRoutes)
-
 // Connect to db
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {

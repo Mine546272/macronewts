@@ -7,7 +7,7 @@ const {
     deleteUser,
     updateUser,
     signUpUser,
-    logInUser
+    logInUser,
 } = require("../controllers/userController")
 
 const router = express.Router()
@@ -32,4 +32,5 @@ router.post('/signup', signUpUser)
 
 //Login Section
 router.post('/login', logInUser)
+
 module.exports = router
